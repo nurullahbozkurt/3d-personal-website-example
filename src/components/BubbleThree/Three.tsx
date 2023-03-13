@@ -14,17 +14,19 @@ const Three = (props: Props) => {
   const { set, background, fill } = useApp();
 
   return (
-    <div className="flex w-full h-full -mb-[200px]">
-      <Canvas className="canvas h-full order-2 flex-1" dpr={[1, 2]}>
-        <Scene setBg={set} />
-        <OrbitControls
-          enablePan={false}
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-      </Canvas>
+    <div className="flex lg:flex-row flex-col-reverse">
       <Overlay fill={fill} />
+      <div className="hidden lg:flex">
+        <Canvas className="canvas" dpr={[1, 2]}>
+          <Scene setBg={set} />
+          <OrbitControls
+            enablePan={false}
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+          />
+        </Canvas>
+      </div>
     </div>
   );
 };

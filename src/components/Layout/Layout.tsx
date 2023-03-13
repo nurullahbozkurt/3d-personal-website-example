@@ -5,6 +5,7 @@ import { a } from "@react-spring/web";
 import Link from "next/link";
 import { AiFillCode } from "react-icons/ai";
 import { useApp } from "@/states/app";
+import { FiMenu } from "react-icons/fi";
 
 type Props = {
   children: React.ReactNode;
@@ -22,31 +23,25 @@ const Layout = (props: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <a.main style={{ background }} className=" w-full h-full">
+      <a.div style={{ background }} className="w-full">
         <a.div
-          style={{
-            color: fill,
-          }}
-          className="w-full h-[50px] flex items-center justify-between px-10 fixed"
+          style={{ background }}
+          className="w-full flex items-center p-2 justify-between lg:px-10 lg:py-5 fixed z-20"
         >
-          <div className="text-3xl rounded  border-black ">
-            <AiFillCode />
+          <div className="text-sm lg:text-3xl rounded">
+            <AiFillCode className="w-10 h-10 lg:w-full lg:h-full" />
           </div>
-          <div className="flex items-center gap-3 font-bold text-lg">
+          <div className="text-sm lg:text-3xl rounded block lg:hidden">
+            <FiMenu className="w-10 h-10 lg:w-full lg:h-full" />
+          </div>
+          <div className="hidden lg:flex items-center gap-3 font-bold text-lg">
             <Link href="">About</Link>
             <Link href="">Work</Link>
             <Link href="">Contact</Link>
           </div>
         </a.div>
-        <a.div
-          style={{
-            color: fill,
-          }}
-          className="w-full h-full"
-        >
-          {props.children}
-        </a.div>
-      </a.main>
+        <div className="pt-20 px-2"> {props.children}</div>
+      </a.div>
     </>
   );
 };

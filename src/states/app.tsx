@@ -1,5 +1,5 @@
-import { useSpring } from "@react-spring/core";
 import React, { useContext, createContext, PropsWithChildren } from "react";
+import { useSpring } from "@react-spring/core";
 
 interface AppContext {
   background: any;
