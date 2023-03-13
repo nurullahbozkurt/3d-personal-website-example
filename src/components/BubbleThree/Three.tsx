@@ -1,21 +1,21 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useSpring } from "@react-spring/core";
 import { a } from "@react-spring/web";
 import Overlay from "./Overlay";
 import Scene from "./Scene";
-
+import Link from "next/link";
+import { AiFillCode } from "react-icons/ai";
+import { useApp } from "@/states/app";
+import { Layout } from "../Layout";
 type Props = {};
 
 const Three = (props: Props) => {
-  const [{ background, fill }, set] = useSpring(
-    { background: "#f0f0f0", fill: "#202020" },
-    []
-  );
+  const { set, background, fill } = useApp();
+
   return (
-    <a.main style={{ background }} className="flex w-full h-full">
-      <Canvas className="canvas h-full order-2 flex-1 " dpr={[1, 2]}>
+    <div className="flex w-full h-full -mb-[200px]">
+      <Canvas className="canvas h-full order-2 flex-1" dpr={[1, 2]}>
         <Scene setBg={set} />
         <OrbitControls
           enablePan={false}
@@ -25,7 +25,7 @@ const Three = (props: Props) => {
         />
       </Canvas>
       <Overlay fill={fill} />
-    </a.main>
+    </div>
   );
 };
 

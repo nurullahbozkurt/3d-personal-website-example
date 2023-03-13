@@ -1,13 +1,15 @@
 import React from "react";
 import { Layout } from "@/components/Layout";
-import { Three } from "@/components/Three";
+import { BubbleThree } from "@/components/BubbleThree";
+import { ComputerThree } from "@/components/ComputerThree";
 
 type Props = {};
 
 const Home = (props: Props) => {
   return (
     <Layout>
-      <Three />
+      <BubbleThree />
+      <ComputerThree />
     </Layout>
   );
 };

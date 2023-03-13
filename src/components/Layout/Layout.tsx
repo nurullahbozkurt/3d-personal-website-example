@@ -1,20 +1,18 @@
 import React from "react";
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import { useSpring } from "@react-spring/core";
 import { a } from "@react-spring/web";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
+import { AiFillCode } from "react-icons/ai";
+import { useApp } from "@/states/app";
 
 type Props = {
   children: React.ReactNode;
 };
 
 const Layout = (props: Props) => {
-  const [{ background, fill }, set] = useSpring(
-    { background: "#f0f0f0", fill: "#202020" },
-    []
-  );
+  const { set, background, fill } = useApp();
+
   return (
     <>
       <Head>
@@ -23,7 +21,32 @@ const Layout = (props: Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-full w-full flex">{props.children}</div>
+
+      <a.main style={{ background }} className=" w-full h-full">
+        <a.div
+          style={{
+            color: fill,
+          }}
+          className="w-full h-[50px] flex items-center justify-between px-10 fixed"
+        >
+          <div className="text-3xl rounded  border-black ">
+            <AiFillCode />
+          </div>
+          <div className="flex items-center gap-3 font-bold text-lg">
+            <Link href="">About</Link>
+            <Link href="">Work</Link>
+            <Link href="">Contact</Link>
+          </div>
+        </a.div>
+        <a.div
+          style={{
+            color: fill,
+          }}
+          className="w-full h-full"
+        >
+          {props.children}
+        </a.div>
+      </a.main>
     </>
   );
 };
