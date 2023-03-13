@@ -11,7 +11,7 @@ const Model = (props: Props) => {
   const group = useRef<THREE.Group>(null!);
 
   // Load model
-  const { nodes, materials } = useGLTF("/mac-draco.glb") as any;
+  const { nodes, materials } = useGLTF("/mac-draco2.glb") as any;
 
   // Make it float
   useFrame((state) => {
@@ -50,15 +50,16 @@ const Model = (props: Props) => {
             geometry={nodes["Cube008_1"].geometry}
           />
           <mesh geometry={nodes["Cube008_2"].geometry}>
-            {/* Drei's HTML component can "hide behind" canvas geometry */}
             <Html
-              className="content overflow-x-hidden "
+              occlude
+              transform
+              style={{ zIndex: "-50" }}
               rotation-x={-Math.PI / 2}
               position={[0, 0.05, -0.09]}
-              transform
-              occlude
+              className="content overflow-x-hidden"
             >
               <div
+                style={{ zIndex: "-10" }}
                 className="wrapper"
                 onPointerDown={(e) => e.stopPropagation()}
               >

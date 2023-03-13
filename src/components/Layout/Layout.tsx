@@ -25,8 +25,11 @@ const Layout = (props: Props) => {
 
       <a.div style={{ background }} className="w-full">
         <a.div
-          style={{ background }}
-          className="w-full flex items-center p-2 justify-between lg:px-10 lg:py-5 fixed z-20"
+          style={{
+            color: fill,
+            background: background,
+          }}
+          className="w-full flex items-center p-2 justify-between lg:px-10 lg:py-5 fixed z-50"
         >
           <div className="text-sm lg:text-3xl rounded">
             <AiFillCode className="w-10 h-10 lg:w-full lg:h-full" />

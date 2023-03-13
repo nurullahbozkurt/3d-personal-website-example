@@ -373,8 +373,8 @@ export default function Screen() {
         )}
       </Popover>
 
-      <main>
-        <div className="w-full text-center ">
+      <main className="">
+        <div className="w-full text-center -z-50">
           <div className="px-4">
             <h1 className="text-2xl tracking-tight font-extrabold text-gray-900">
               <span className="block text-yellow-500">

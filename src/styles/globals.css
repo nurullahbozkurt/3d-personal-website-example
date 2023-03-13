@@ -28,7 +28,7 @@ svg {
 .content {
   width: 334px;
   height: 216px;
-  background: #f0f0f0;
+  background: black;
   border-radius: 3px;
   overflow-y: auto;
   padding: 0;
