@@ -24,7 +24,9 @@ type Props = {};
 const Timeline = (props: Props) => {
   const { background, fill } = useApp();
   return (
-    <div className={`${poppins.className} mt-10 `}>
+    <div
+      className={`${poppins.className} mt-[120px] lg:mt-10 -mb-[300px] lg:mb-0`}
+    >
       <a.div
         id={"work"}
         style={{

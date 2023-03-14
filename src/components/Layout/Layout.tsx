@@ -29,21 +29,21 @@ const Layout = (props: Props) => {
             color: fill,
             background: background,
           }}
-          className="w-full flex items-center p-2 justify-between lg:px-10 lg:py-5 fixed z-50"
+          className="w-full flex items-center p-4 justify-between lg:px-10 lg:py-5 fixed z-50"
         >
           <div className="text-sm lg:text-3xl rounded">
             <AiFillCode className="w-10 h-10 lg:w-full lg:h-full" />
           </div>
-          <div className="text-sm lg:text-3xl rounded block lg:hidden">
+          {/* <div className="text-sm lg:text-3xl rounded block lg:hidden">
             <FiMenu className="w-10 h-10 lg:w-full lg:h-full" />
-          </div>
-          <div className="hidden lg:flex items-center gap-3 font-bold text-lg">
+          </div> */}
+          <div className="flex items-center gap-3 font-bold text-lg">
             <Link href="#about">About</Link>
             <Link href="#work">Work</Link>
             <Link href="#contact">Contact</Link>
           </div>
         </a.div>
-        <div className="pt-20"> {props.children}</div>
+        <div className="pt-20 px-[10px] lg:px-0"> {props.children}</div>
       </a.div>
     </>
   );

@@ -1,13 +1,10 @@
 import React from "react";
+import { useApp } from "@/states/app";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { a } from "@react-spring/web";
+
 import Overlay from "./Overlay";
 import Scene from "./Scene";
-import Link from "next/link";
-import { AiFillCode } from "react-icons/ai";
-import { useApp } from "@/states/app";
-import { Layout } from "../Layout";
 type Props = {};
 
 const Three = (props: Props) => {

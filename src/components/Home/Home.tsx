@@ -15,7 +15,6 @@ const Home = (props: Props) => {
       <ComputerThree />
       <TimeLine />
       <ReactThree />
-      {/* <RocketThree /> */}
     </Layout>
   );
 };
