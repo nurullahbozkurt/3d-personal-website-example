@@ -5,6 +5,10 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { Poppins } from "next/font/google";
+import { ComputerThree } from "../ComputerThree";
+import { useApp } from "@/states/app";
+import { a } from "@react-spring/web";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: "300",
@@ -18,9 +22,23 @@ const poppinsBold = Poppins({
 type Props = {};
 
 const Timeline = (props: Props) => {
+  const { background, fill } = useApp();
   return (
-    <div className={`${poppins.className} mt-10`}>
-      <VerticalTimeline>
+    <div className={`${poppins.className} mt-10 `}>
+      <a.div
+        id={"work"}
+        style={{
+          background: background,
+          color: fill,
+        }}
+        className="p-20"
+      >
+        <h1 className={`${poppinsBold.className} text-[40px]`}>
+          Work Experience
+        </h1>
+      </a.div>
+
+      <VerticalTimeline lineColor="#060816">
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "#060816", color: "#fff" }}

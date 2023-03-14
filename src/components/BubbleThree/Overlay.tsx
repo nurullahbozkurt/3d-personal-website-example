@@ -25,7 +25,7 @@ export default function Overlay({ fill }: any) {
             <h1 className={`${paytoneOne.className} text-[60px]`}>
               Hi, I'm <span className="text-[#fbbd05]">Nurullah</span>
             </h1>
-            <p className="text-2xl font-semibold">
+            <p id="about" className="text-2xl font-semibold">
               I'm a full stack developer. I develop web applications using{" "}
               <span className="font-bold">React</span> and{" "}
               <span className="font-bold">NodeJS</span> technologies.

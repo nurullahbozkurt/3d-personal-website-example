@@ -69,7 +69,8 @@ export default function Scene({ setBg }: any) {
       coat: mode && !hovered ? 0.04 : 1,
       ambient: mode && !hovered ? 1.5 : 0.5,
       env: mode && !hovered ? 0.4 : 1,
-      color: hovered ? "#E8B059" : mode ? "#202020" : "white",
+      color: hovered ? "#E8B059" : mode ? "#021625" : "#021625",
+
       config: (n: any) =>
         n === "wobble" && hovered && { mass: 2, tension: 1000, friction: 10 },
     },
@@ -99,8 +100,8 @@ export default function Scene({ setBg }: any) {
             // Toggle mode between dark and bright
             setMode(!mode);
             setBg({
-              background: !mode ? "#202020" : "#f0f0f0",
-              fill: !mode ? "#f0f0f0" : "#202020",
+              background: !mode ? "#021625" : "#f0f0f0",
+              fill: !mode ? "#f0f0f0" : "#021625",
             });
           }}
         >

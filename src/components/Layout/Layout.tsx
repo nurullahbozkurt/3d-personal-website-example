@@ -38,12 +38,12 @@ const Layout = (props: Props) => {
             <FiMenu className="w-10 h-10 lg:w-full lg:h-full" />
           </div>
           <div className="hidden lg:flex items-center gap-3 font-bold text-lg">
-            <Link href="">About</Link>
-            <Link href="">Work</Link>
-            <Link href="">Contact</Link>
+            <Link href="#about">About</Link>
+            <Link href="#work">Work</Link>
+            <Link href="#contact">Contact</Link>
           </div>
         </a.div>
-        <div className="pt-20 px-2"> {props.children}</div>
+        <div className="pt-20"> {props.children}</div>
       </a.div>
     </>
   );

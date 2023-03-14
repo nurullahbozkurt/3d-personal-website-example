@@ -3,6 +3,8 @@ import { Layout } from "@/components/Layout";
 import { BubbleThree } from "@/components/BubbleThree";
 import { ComputerThree } from "@/components/ComputerThree";
 import { TimeLine } from "../VerticalTimeline";
+import { ReactThree } from "../FooterThree";
+import { RocketThree } from "../RocketThree";
 
 type Props = {};
 
@@ -12,6 +14,8 @@ const Home = (props: Props) => {
       <BubbleThree />
       <ComputerThree />
       <TimeLine />
+      <ReactThree />
+      {/* <RocketThree /> */}
     </Layout>
   );
 };
